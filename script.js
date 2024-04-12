@@ -4,7 +4,7 @@ const createNote=()=>{
     let description = document.getElementById("description")
     const note = {
         title:title.value,
-        description:description.ariaValueMax,
+        description:description.value,
         date: new Date()
     }
     notes.push(note);
@@ -23,8 +23,11 @@ const rendernotes= () => {
 
         const btn = document.createElement('button');
         btn.innerHTML = '<div>delete</div>';
-        btn.classname = 'delete-button';
-        btn.onclick=()=>deletenote(index);
+        const colors = ['red','blue','green','dodgerblue','aqua','yellow','violet']
+        // for
+        // btn.style.backgroundColor('')
+        // btn.classname = 'delete-button';
+        // btn.onclick=()=>deletenote(index);
 
         li.appendChild(btn);
         crnotes.appendChild(li);
